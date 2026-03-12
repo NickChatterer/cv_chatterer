@@ -1,0 +1,279 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+
+const projects = [
+  {
+    num: "01",
+    name: "Кабинет Самозанятого ИП",
+    desc: "Запустил кабинет самозанятого внутри банковского приложения с интеграцией с ФНС через API. Более 1000 предпринимателей используют сервис после запуска, продукт сделал банк официальным партнёром налоговой службы.",
+    tags: ["Fintech", "FNS API", "Product Launch", "Integration"],
+    link: "https://tochka.com/registration/ip-npd/",
+  },
+  {
+    num: "02",
+    name: "Биржа для самозанятых",
+    desc: "Перезапустил сервис выплат в полноценную биржу для размещения задач и поиска исполнителей. Сервисом пользуются 75 000+ самозанятых, ежемесячный комиссионный доход — около 10 млн ₽.",
+    tags: ["Marketplace", "Fintech", "Product Transformation", "Payments"],
+    link: "https://tochka.com/self-employed/stock-exchange/",
+  },
+  {
+    num: "03",
+    name: "Выплатное решение для самозанятых",
+    desc: "Запустил решение для автоматизированных выплат самозанятым с генерацией чеков и проверкой статуса через ФНС. Более 2000 пользователей, ежемесячный доход 2–3 млн ₽.",
+    tags: ["Fintech", "Payments", "API Integration", "Compliance"],
+    link: "https://tochka.com/self-employed/",
+  },
+];
+---
+
+<Layout>
+  <Nav />
+  <Hero />
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-number">01</span>
+        <div class="section-line"></div>
+        <h2 class="section-title">About me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <p>Управляю полным циклом разработки финтех-продуктов — от сбора бизнес-требований и формирования product vision до релиза и анализа эффективности фич. Работаю с roadmap, приоритезацией и развитием продукта вместе со стейкхолдерами.</p>
+          <p>Организую работу кросс-функциональных команд: аналитики, дизайнеры, разработка, QA и юристы. Фасилитирую грумминги, управляю бэклогом и сроками в Jira, помогаю команде устранять блокеры и доводить задачи до качественного релиза.</p>
+          <p>Запускал продукты для <strong>B2B, B2G</strong> и сегмента самозанятых, обеспечивая соответствие требованиям регуляторов. Развиваю процессы внутри команд: повышаю прозрачность, скорость релизов и участвую в формировании стандартов.</p>
+        </div>
+        <div class="about-facts fade-in">
+          {[
+            ["Name", "Nikita"],
+            ["Role", "Project Manager / System Analyst"],
+            ["Tools", "Jira, Confluence, Figma, Miro"],
+            ["Notation", "BPMN 2.0, UML"],
+            ["Product", "Roadmap, Backlog, Discovery"],
+            ["Delivery", "End-to-End, Release Management"],
+            ["Domain", "Fintech, B2B / B2G"],
+            ["Methodology", "Agile, Scrum, Kanban"],
+          ].map(([key, val]) => (
+            <div class="fact-row">
+              <span class="fact-key">{key}</span>
+              <span class="fact-val">{val}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-number">02</span>
+        <div class="section-line"></div>
+        <h2 class="section-title">Stack / Навыки</h2>
+      </div>
+      <div class="skills-grid fade-in">
+        <div class="skill-group" data-icon="📋">
+          <div class="skill-group-title">Project Management</div>
+          <div class="skill-tags">
+            <span class="tag highlight">Jira</span>
+            <span class="tag highlight">Confluence</span>
+            <span class="tag">Agile</span>
+            <span class="tag">Scrum</span>
+            <span class="tag">Kanban</span>
+            <span class="tag">Roadmapping</span>
+            <span class="tag">Backlog Management</span>
+            <span class="tag">Stakeholder Management</span>
+          </div>
+        </div>
+        <div class="skill-group" data-icon="🔍">
+          <div class="skill-group-title">System Analysis</div>
+          <div class="skill-tags">
+            <span class="tag highlight">BPMN 2.0</span>
+            <span class="tag">UML</span>
+            <span class="tag">User Stories</span>
+            <span class="tag">Use Cases</span>
+            <span class="tag">REST API</span>
+            <span class="tag">SOAP API</span>
+          </div>
+        </div>
+        <div class="skill-group" data-icon="📊">
+          <div class="skill-group-title">Product & Data</div>
+          <div class="skill-tags">
+            <span class="tag blue">SQL</span>
+            <span class="tag blue">Product Analytics</span>
+            <span class="tag">A/B Testing</span>
+            <span class="tag">Product Metrics</span>
+          </div>
+        </div>
+        <div class="skill-group" data-icon="🚀">
+          <div class="skill-group-title">Product Management</div>
+          <div class="skill-tags">
+            <span class="tag highlight">Product Discovery</span>
+            <span class="tag">Product Vision</span>
+            <span class="tag">Roadmap Planning</span>
+            <span class="tag">Feature Prioritization</span>
+            <span class="tag">Go-to-Market</span>
+            <span class="tag">Customer Journey</span>
+          </div>
+        </div>
+        <div class="skill-group" data-icon="🌐">
+          <div class="skill-group-title">Soft Skills</div>
+          <div class="skill-tags">
+            <span class="tag purple">Communication</span>
+            <span class="tag purple">Leadership</span>
+            <span class="tag">Facilitation</span>
+            <span class="tag">Problem Solving</span>
+            <span class="tag">Decision Making</span>
+            <span class="tag">Cross-team Collaboration</span>
+          </div>
+        </div>
+        <div class="skill-group" data-icon="🗣️">
+          <div class="skill-group-title">Languages</div>
+          <div class="skill-tags">
+            <span class="tag highlight">Русский — Native</span>
+            <span class="tag">English — B2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-number">03</span>
+        <div class="section-line"></div>
+        <h2 class="section-title">Projects / Проекты</h2>
+      </div>
+      <div class="projects-list">
+        {projects.map((p) => (
+          <a href={p.link} target="_blank" class="project-card fade-in">
+            <div class="project-num">{p.num}</div>
+            <div class="project-info">
+              <div class="project-name">{p.name}</div>
+              <div class="project-desc">{p.desc}</div>
+              <div class="project-tags">
+                {p.tags.map(t => <span class="project-tag">{t}</span>)}
+              </div>
+            </div>
+            <div class="project-arrow">→</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-glow"></div>
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-number">04</span>
+        <div class="section-line"></div>
+        <h2 class="section-title">Contact / Контакты</h2>
+      </div>
+      <div class="contact-inner">
+        <div class="fade-in">
+          <h3 class="contact-heading">Let's build products<br/>that <span class="accent">matter.</span></h3>
+          <p class="contact-sub">Работаю на стыке стратегии, технологий и продуктовой разработки.<br/>Открыт к новым проектам, партнерствам и сильным командам.</p>
+        </div>
+        <div class="contact-links fade-in">
+          {[
+            ["Email", "chatterer_95@mail.ru", "mailto:chatterer_95@mail.ru"],
+            ["Telegram", "@Chatterer", "https://t.me/Chatterer"],
+            ["LinkedIn", "nikita-popov-chatterer", "https://www.linkedin.com/in/nikita-popov-chatterer/"],
+          ].map(([platform, handle, href]) => (
+            <a href={href} target="_blank" class="contact-link">
+              <div class="link-left">
+                <div>
+                  <div class="link-platform">{platform}</div>
+                  <div class="link-handle">{handle}</div>
+                </div>
+              </div>
+              <span class="link-icon">→</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-copy">© 2025 <span>Nikita Popov</span> — Built with Astro.js</div>
+    <div class="footer-tech">// project_manager · system_analyst · fintech</div>
+  </footer>
+</Layout>
+
+<style>
+/* ABOUT */
+#about { padding: 120px 0; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.about-text p { font-size: 16px; color: #9999aa; line-height: 1.8; margin-bottom: 20px; }
+.about-text p strong { color: var(--text); font-weight: 600; }
+.fact-row { display: grid; grid-template-columns: 160px 1fr; gap: 20px; padding: 18px 24px; background: rgba(15,15,24,0.7); border: 1px solid var(--border); margin-bottom: 1px; transition: border-color 0.2s; backdrop-filter: blur(8px); }
+.fact-row:hover { border-color: var(--accent); }
+.fact-key { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; padding-top: 2px; }
+.fact-val { font-size: 14px; color: var(--text); }
+
+/* SKILLS */
+#skills { padding: 120px 0; background: rgba(15,15,24,0.5); position: relative; }
+#skills::before, #skills::after { content: ''; position: absolute; left: 0; right: 0; height: 1px; background: var(--border); }
+#skills::before { top: 0; }
+#skills::after { bottom: 0; }
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
+.skill-group { background: rgba(10,10,15,0.9); padding: 36px 32px; position: relative; overflow: hidden; backdrop-filter: blur(8px); }
+.skill-group::after { content: attr(data-icon); position: absolute; bottom: -10px; right: 16px; font-size: 80px; opacity: 0.04; pointer-events: none; }
+.skill-group-title { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+.skill-group-title::before { content: ''; width: 20px; height: 1px; background: var(--accent); }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* PROJECTS */
+#projects { padding: 120px 0; }
+.projects-list { display: flex; flex-direction: column; gap: 1px; }
+.project-card { display: grid; grid-template-columns: 60px 1fr auto; gap: 32px; align-items: center; padding: 32px; background: rgba(15,15,24,0.7); border: 1px solid var(--border); text-decoration: none; color: inherit; transition: all 0.25s; position: relative; overflow: hidden; backdrop-filter: blur(8px); }
+.project-card::before { content: ''; position: absolute; top: 0; left: 0; width: 0; height: 100%; background: linear-gradient(90deg, rgba(155,89,255,0.06), transparent); transition: width 0.3s; }
+.project-card:hover::before { width: 100%; }
+.project-card:hover { border-color: var(--accent); }
+.project-num { font-family: var(--mono); font-size: 24px; color: var(--border2); font-weight: 700; }
+.project-name { font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+.project-desc { font-size: 14px; color: var(--muted); line-height: 1.5; margin-bottom: 14px; }
+.project-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.project-tag { font-family: var(--mono); font-size: 11px; padding: 3px 10px; background: rgba(155,89,255,0.08); color: var(--accent); border: 1px solid rgba(155,89,255,0.2); }
+.project-arrow { font-size: 20px; color: var(--border2); transition: all 0.2s; }
+.project-card:hover .project-arrow { color: var(--accent); transform: translateX(4px); }
+
+/* CONTACT */
+#contact { padding: 120px 0; background: rgba(15,15,24,0.5); position: relative; overflow: hidden; }
+.contact-glow { position: absolute; bottom: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(155,89,255,0.1) 0%, transparent 70%); pointer-events: none; }
+.contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.contact-heading { font-size: clamp(32px, 4vw, 52px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 24px; }
+.contact-heading .accent { color: var(--accent); }
+.contact-sub { font-size: 15px; color: var(--muted); line-height: 1.7; max-width: 380px; }
+.contact-links { display: flex; flex-direction: column; gap: 1px; }
+.contact-link { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; background: rgba(15,15,24,0.8); border: 1px solid var(--border); text-decoration: none; color: var(--text); transition: all 0.2s; backdrop-filter: blur(8px); }
+.contact-link:hover { border-color: var(--accent); }
+.contact-link:hover .link-icon { color: var(--accent); }
+.link-left { display: flex; align-items: center; gap: 16px; }
+.link-platform { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+.link-handle { font-size: 14px; font-weight: 500; }
+.link-icon { font-size: 18px; color: var(--border2); transition: color 0.2s; }
+
+/* FOOTER */
+footer { padding: 32px 40px; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+.footer-copy { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.footer-copy span { color: var(--accent); }
+.footer-tech { font-family: var(--mono); font-size: 12px; color: var(--border2); }
+
+@media (max-width: 900px) {
+  .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .project-card { grid-template-columns: 40px 1fr auto; gap: 16px; padding: 20px; }
+  footer { flex-direction: column; gap: 8px; text-align: center; }
+}
+</style>
